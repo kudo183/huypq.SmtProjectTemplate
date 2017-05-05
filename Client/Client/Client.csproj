@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.1.0\lib\net451\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,6 +59,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Smt\ManageUserView.xaml.cs">
+      <DependentUpon>ManageUserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Smt\SmtUserClaimView.cs" />
+    <Compile Include="Smt\SmtUserClaimViewModel.cs" />
+    <Compile Include="Smt\SmtUserView.cs" />
+    <Compile Include="Smt\SmtUserViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +78,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Smt\ManageUserView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -86,6 +101,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,10 +112,30 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\huypq.SimpleDataGrid\SimpleDataGrid\SimpleDataGrid.csproj">
+      <Project>{9cfa4fe9-01d0-4bd1-aa8a-bca4b4a60375}</Project>
+      <Name>SimpleDataGrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\huypq.SmtShared\old.NET\huypq.SmtShared\huypq.SmtShared\huypq.SmtShared.csproj">
+      <Project>{d0ea0474-d927-4193-9dda-58363e8a64c4}</Project>
+      <Name>huypq.SmtShared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\huypq.SmtWpfClient\huypq.SmtWpfClient\huypq.SmtWpfClient.csproj">
       <Project>{8e941c6e-74ca-4baa-af1d-9d98283db1d1}</Project>
       <Name>huypq.SmtWpfClient</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Shared.Old.Net\Shared.Old.Net\Shared.Old.Net.csproj">
+      <Project>{50E90245-41E9-4B66-9C7B-72F9B013833F}</Project>
+      <Name>Shared.Old.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Text\Gen\#TextManagerTemplate.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ViewModel\Gen\#ViewModelTemplate.txt" />
+    <Resource Include="View\Gen\#ViewTemplate.xaml.cs.txt" />
+    <Resource Include="View\Gen\#ViewTemplate.xaml.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

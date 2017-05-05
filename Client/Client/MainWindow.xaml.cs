@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using huypq.SmtWpfClient;
+using huypq.SmtWpfClient.Abstraction;
+using huypq.SmtWpfClient.View;
+using huypq.SmtWpfClient.ViewModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Client.View;
 
 namespace Client
 {
@@ -20,9 +12,40 @@ namespace Client
     /// </summary>
     public partial class MainWindow : Window
     {
+        IDataService _dataService = ServiceLocator.Get<IDataService>();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            _dataService.Logout();
+            (loginView.DataContext as LoginViewModel).ClearData();
+        }
+
+        private void ChangePasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            var w = new ChangePasswordWindow();
+            w.ShowDialog();
+        }
+
+        private void ManageUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            var w = new Window()
+            {
+                Content = new ManageUserView()
+            };
+            w.Show();
+        }
+
+        private void AllViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            var w = new Window()
+            {
+                Content = new AllView()
+            };
+            w.Show();
         }
     }
 }

@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using huypq.SmtMiddleware;
+using huypq.SmtMiddleware.Entities;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Server.Entities;
 
 namespace Server
 {
@@ -12,7 +15,7 @@ namespace Server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            //services.AddSmtWithTrustedConnection<TestContext, SmtTenant, SmtUser, SmtUserClaim>("Test", @"c:\huypq.SmtMiddleware.key");
+            services.AddSmtWithTrustedConnection<SqlDbContext, SmtTenant, SmtUser, SmtUserClaim>("SqlDbName", @"c:\Server.key");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -21,7 +24,7 @@ namespace Server
             loggerFactory.AddConsole();
 
             app.UseCors(builder => builder.WithOrigins("http://localhost").AllowAnyHeader().AllowAnyMethod());
-            //app.UseSmt<TestContext, SmtTenant, SmtUser, SmtUserClaim>("huypq.SmtMiddlewareTest");
+            app.UseSmt<SqlDbContext, SmtTenant, SmtUser, SmtUserClaim>("Server");
         }
     }
 }
