@@ -6,9 +6,9 @@ using Server.Entities;
 
 namespace Server.Entities
 {
-    public partial class TestContext : DbContext, IDbContext<SmtTenant, SmtUser, SmtUserClaim>
+    public partial class SqlDbContext : DbContext, IDbContext<SmtTenant, SmtUser, SmtUserClaim>
     {
-	    public TestContext(DbContextOptions<TestContext> options) : base(options)
+	    public SqlDbContext(DbContextOptions<SqlDbContext> options) : base(options)
         {
             ChangeTracker.AutoDetectChangesEnabled = false;
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
