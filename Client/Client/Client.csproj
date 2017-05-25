@@ -84,13 +84,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="View\Gen\*.cs"/>
+    <Compile Include="View\Gen\*.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Page Include="View\Gen\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ViewModel\Gen\*.cs"/>
-    <Compile Include="Text\Gen\*.cs"/>
+    <Compile Include="ViewModel\Gen\*.cs" />
+    <Compile Include="Text\Gen\*.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -132,6 +135,10 @@
     <ProjectReference Include="..\..\..\huypq.SmtWpfClient\huypq.SmtWpfClient\huypq.SmtWpfClient.csproj">
       <Project>{8e941c6e-74ca-4baa-af1d-9d98283db1d1}</Project>
       <Name>huypq.SmtWpfClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\QueryBuilder\old.NET\QueryBuilder\QueryBuilder\QueryBuilder.csproj">
+      <Project>{e9fbfac6-4189-4eb2-bea0-d81d78687c17}</Project>
+      <Name>QueryBuilder</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Shared\Shared.Old.Net\Shared.Old.Net\Shared.Old.Net.csproj">
       <Project>{50E90245-41E9-4B66-9C7B-72F9B013833F}</Project>
