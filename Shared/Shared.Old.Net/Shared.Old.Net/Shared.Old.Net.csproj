@@ -54,6 +54,9 @@
     <Compile Include="..\..\src\Shared\SmtUserDto.cs">
       <Link>SmtUserDto.cs</Link>
     </Compile>
+    <Compile Include="..\..\src\Shared\Gen\*.cs">
+      <Link>%(Filename)%(Extension)</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "huypq.SmtShared", "..\..\hu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDataGrid", "..\..\huypq.SimpleDataGrid\SimpleDataGrid\SimpleDataGrid.csproj", "{9CFA4FE9-01D0-4BD1-AA8A-BCA4B4A60375}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryBuilder", "..\..\QueryBuilder\old.NET\QueryBuilder\QueryBuilder\QueryBuilder.csproj", "{E9FBFAC6-4189-4EB2-BEA0-D81D78687C17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9CFA4FE9-01D0-4BD1-AA8A-BCA4B4A60375}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CFA4FE9-01D0-4BD1-AA8A-BCA4B4A60375}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CFA4FE9-01D0-4BD1-AA8A-BCA4B4A60375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9FBFAC6-4189-4EB2-BEA0-D81D78687C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9FBFAC6-4189-4EB2-BEA0-D81D78687C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9FBFAC6-4189-4EB2-BEA0-D81D78687C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9FBFAC6-4189-4EB2-BEA0-D81D78687C17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

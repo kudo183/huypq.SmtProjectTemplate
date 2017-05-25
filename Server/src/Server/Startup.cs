@@ -15,7 +15,7 @@ namespace Server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddSmtWithTrustedConnection<SqlDbContext, SmtTenant, SmtUser, SmtUserClaim>("SqlDbName", @"c:\Server.key");
+            services.AddSmtWithTrustedConnection<SqlDbContext, SmtTenant, SmtUser, SmtUserClaim>("Test", @"c:\Server.key");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
