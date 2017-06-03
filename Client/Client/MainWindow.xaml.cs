@@ -3,7 +3,7 @@ using huypq.SmtWpfClient.Abstraction;
 using huypq.SmtWpfClient.View;
 using huypq.SmtWpfClient.ViewModel;
 using System.Windows;
-using Client.View;
+using Client.View.Smt;
 
 namespace Client
 {
@@ -40,7 +40,7 @@ namespace Client
             {
                 RootUri = "http://localhost:5000",
 #if DEBUG
-                Token = "CfDJ8J0CZcxInRhFvSirfZanTFyE1hpyx7CXXn4481gOUW7vWFUUg48sSUDEChTx8riPcZwBfcTnO24j9_p8O9foxq5IJ-dZN3LPqtMQF1NKzS7uCt7QjedoTIPjky58FjaYdRIsBfoP1gnzgIUBV9c9x5OlnlJOtv3jCSm_9BUY03Ny"
+                Token = "CfDJ8J0CZcxInRhFvSirfZanTFyQ4M2ZsTDZkFjZTHoh7pxESJq9aruiUhaRYY6_JYuhzEpa0RnG_Xo4bTYJIZag6v9IBXpEDk9LlCysPdzBkCcgBjPRBpk0Vw4WrYqTM4kS16GZ24UaVdSvSKGSnMISSUlQnyVY8CNWTDAuxqngrW0i"
 #endif
             });
 
