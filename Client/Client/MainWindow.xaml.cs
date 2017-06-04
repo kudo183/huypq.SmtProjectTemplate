@@ -49,8 +49,7 @@ namespace Client
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            _dataService.Logout();
-            (loginView.DataContext as LoginViewModel).ClearData();
+            (loginView.DataContext as LoginViewModel).Logout();
         }
 
         private void ChangePasswordButton_Click(object sender, RoutedEventArgs e)
