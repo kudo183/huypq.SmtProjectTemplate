@@ -84,6 +84,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="ViewModel\ChiTietDonHangViewModel.part.cs" />
     <Compile Include="View\Gen\*.cs">
       <DependentUpon>%(Filename)</DependentUpon>
       <SubType>Code</SubType>
