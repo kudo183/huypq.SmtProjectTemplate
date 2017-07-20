@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "huypq.Crypto", "..\..\huypq
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "huypq.SmtShared", "..\..\huypq.SmtShared\huypq.SmtShared\huypq.SmtShared.csproj", "{CDBFEAFD-C22F-4048-81BF-6DD129B2E14A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "..\Shared\Shared\Shared.csproj", "{3B48ABA8-C55D-4CD0-942A-F9D7F9F90350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CDBFEAFD-C22F-4048-81BF-6DD129B2E14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDBFEAFD-C22F-4048-81BF-6DD129B2E14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDBFEAFD-C22F-4048-81BF-6DD129B2E14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B48ABA8-C55D-4CD0-942A-F9D7F9F90350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B48ABA8-C55D-4CD0-942A-F9D7F9F90350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B48ABA8-C55D-4CD0-942A-F9D7F9F90350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B48ABA8-C55D-4CD0-942A-F9D7F9F90350}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,6 +18,7 @@
     <ProjectReference Include="..\..\..\huypq.QueryBuilder\huypq.QueryBuilder\huypq.QueryBuilder.csproj" />
     <ProjectReference Include="..\..\..\huypq.SmtMiddleware\huypq.SmtMiddleware\huypq.SmtMiddleware.csproj" />
     <ProjectReference Include="..\..\..\huypq.SmtShared\huypq.SmtShared\huypq.SmtShared.csproj" />
+    <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" />
   </ItemGroup>
 
 </Project>
