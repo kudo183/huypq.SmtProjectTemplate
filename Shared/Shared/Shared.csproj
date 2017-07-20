@@ -10,7 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\huypq.SmtShared\huypq.SmtShared\huypq.SmtShared.csproj" />
+    <ProjectReference Include="..\..\..\huypq.SmtShared\huypq.SmtShared\huypq.SmtShared.csproj">
+      <ReferenceOutputAssembly></ReferenceOutputAssembly>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>
